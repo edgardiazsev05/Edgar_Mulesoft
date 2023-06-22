@@ -26,4 +26,16 @@ jobs:
       # Runs a single command using the runners shell
       - name: Greet the user
         run: echo Hello, Edgar!
+        
+      - name: Utilize API Catalog CLI (publishing to exchange OAS spec)
+        run: npm i api-catalog-cli -g
+
+      - name: Invoque Test Mocking Service
+        run: curl https://jsonplaceholder.typicode.com/users/1
+
+      - name: Compile and Build project (mvn clean package - mvn test)
+        run: mvn -v
+        
+      - name: Greet the user
+        run: echo Hello, Edgar!
 
